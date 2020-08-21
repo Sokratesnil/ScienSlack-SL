@@ -15,6 +15,7 @@
 \usepackage{setspace}
 \usepackage{textcomp}
 \usepackage{hyperref}
+\usepackage{tikz}
 
 %%%%%% BibTeX %%%%%%
 \bibliographystyle{plain}
@@ -78,7 +79,7 @@
 
 \newcommand{\mathemp}{\mathrm{emp}}
 \newcommand{\mathvalnil}{\mathrm{nil}}
-\newcommand{\mathpointer}[1]{\mathrel{\overset{#1}{\mapsto}}}
+\newcommand{\mathpointer}[3]{#1\mathrel{\overset{#2}{\mapsto}}\left\langle #3 \right\rangle}
 \newcommand{\mathprls}[2]{\mathop{\mathrm{ls}}\left(#1{,}\ #2\right)}
 \newcommand{\mathprtree}[1]{\mathop{\mathrm{tree}}\left(#1\right)}
 \newcommand{\mathsepstar}{\mathrel{\ast}}

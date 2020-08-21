@@ -31,7 +31,47 @@
 \end{frame}
 
 \begin{frame}{分離論理の意味のイメージ}{$\mathsepstar$}
- 
+  \begin{table}[tbh]
+    \begin{tabular}{c}
+      \begin{tikzpicture}
+        \draw (0,0) rectangle +(1,1);
+        \draw (1.5,0) rectangle +(1,1);
+        \draw (0.5,0.5) node{$\bullet$};
+        \draw[->] (0.5,0.5) -- (2.0,0.5); 
+        \draw (0.5,-0.5) node{$x$};
+        \draw (2.0,-0.5) node{$y$};
+        \draw (1.25,-1.0) node{$\mathpointer{x}{1}{y}$};
+        
+        \onslide<2->{\draw (3.0,0.5) node{$*$};}
+        
+        \draw (3.5,0) rectangle +(1,1);
+        \draw (5.0,0) rectangle +(1,1);
+        \draw (4.0,0.5) node{$\bullet$};
+        \draw[->] (4.0,0.5) -- (5.5,0.5); 
+        \draw (4.0,-0.5) node{$y$};
+        \draw (5.5,-0.5) node{$z$};
+        \draw (4.75,-1.0) node{$\mathpointer{y}{1}{z}$};
+      \end{tikzpicture}
+       \\
+      \onslide<3->
+      \begin{tikzpicture}
+        \draw (0,0) rectangle +(1,1);
+        \draw (1.5,0) rectangle +(1,1);
+        \draw (3.0,0) rectangle +(1,1);
+
+        \draw (0.5,-0.5) node{x};
+        \draw (2.0,-0.5) node{y};
+        \draw (3.5,-0.5) node{z};
+
+        \draw (0.5,0.5) node{$\bullet$};
+        \draw[->] (0.5,0.5) -- (2.0,0.5);
+        \draw (2.0,0.5) node{$\bullet$};
+        \draw[->] (2.0,0.5) -- (3.5,0.5);
+
+        \draw (2.0,-1.0) node{$\mathpointer{x}{1}{y}\mathsepstar \mathpointer{x}{1}{y}$};
+      \end{tikzpicture}
+    \end{tabular}
+  \end{table}
 \end{frame}
 
 \begin{frame}{分離論理の意味のイメージ}{$\mathprls{\mathdash}{\mathdash}$}
@@ -71,6 +111,10 @@
 \appendix
 
 \begin{frame}{Frame Rule}
+ 
+\end{frame}
+
+\begin{frame}{Symbolic heap}
  
 \end{frame}
 
