@@ -1,0 +1,108 @@
+%%%%%%% packages for writing support %%%%%
+\usepackage[l2tabu, orthodox]{nag}
+
+%%%%%%%% packages %%%%%%%%%%%
+
+\usepackage{mathrsfs}
+\usepackage{ascmac}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{mleftright}
+\usepackage[at]{easylist}
+\usepackage{bussproofs}
+\usepackage{setspace}
+\usepackage{textcomp}
+
+%%%%%% BibTeX %%%%%%
+\bibliographystyle{plain}
+
+%%%%%%% Beamer settings %%%%%%%%%
+\usepackage{luatexja}% 日本語したい
+\usepackage[ipaex]{luatexja-preset}% IPAexフォントしたい
+\renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Madrid}
+\setbeamertemplate{footline}[frame number]
+\setbeamercolor{page number in head/foot}{fg=gray}
+% \AtBeginSection[]{%
+%    \begin{frame}{Outline}
+%     \tableofcontents[currentsection]
+%\end{frame}
+%    }%
+\renewcommand{\baselinestretch}{1.6} 
+\setstretch{1.6} % ページ全体の行間を設定
+
+%%%%%%% theorems %%%%%%%%%%%%
+
+\setbeamertemplate{theorems}[numbered]
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{fact}[theorem]{Fact}
+\theoremstyle{example}
+\newtheorem*{ex}{Example}
+\newtheorem{rem}{Remark}
+\renewcommand{\therem}{}
+\newtheorem*{Note}{Note}
+\def\proofname{Proof}
+
+\newcommand{\QED}{\hfill $\blacksquare$ \par}
+
+
+%%%%%%%%%%%%%%%% new commands %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\mathLdoubleko}{\mathopen{[\! [}}
+\newcommand{\mathRdoubleko}{\mathclose{]\!]}}
+\newcommand{\mathdefiffarrow}{\mathrel{:\Longleftrightarrow}}
+\newcommand{\mathdoubleko}[1]{\left[ \! \left[ #1 \right] \! \right] }
+
+\newcommand{\mathsetintension}[2]{\left\{ #1 \left| #2 \right. \right\} }
+\newcommand{\mathsetextension}[1]{\left\{ #1 \right\} }
+\newcommand{\mathrelbar}{\mathrel{|}}
+
+\newcommand{\mathFV}[1]{\mathop{\mathit{FV}}\left( #1 \right)}
+\newcommand{\mathVar}{\mathrm{Variables}}
+\newcommand{\mathFunc}{\mathrm{Functions}}
+\newcommand{\mathPred}{\mathrm{Predicates}}
+
+\newcommand{\mathVal}{\mathrm{Values}}
+\newcommand{\mathLoc}{\mathrm{Location}}
+
+\newcommand{\mathemp}{\mathrm{emp}}
+\newcommand{\mathvalnil}{\mathrm{nil}}
+\newcommand{\mathpointer}[1]{\mathrel{\overset{#1}{\mapsto}}}
+\newcommand{\mathprls}[2]{\mathop{\mathrm{ls}}\left(#1{,}\ #2\right)}
+\newcommand{\mathprtree}[1]{\mathop{\mathrm{tree}}\left(#1\right)}
+\newcommand{\mathmagicwand}{\mathrel{\text{---}\!\!*}}
+
+\newcommand{\mathfinparmap}{\mathrel{\overset{\mathrm{fin}}{\rightharpoonup}}}
+\newcommand{\mathdom}[1]{\mathop{\mathrm{dom}}\mleft(#1\mright)}
+
+\newcommand{\mathmetasy}[1]{\mathbf{#1}}
+\newcommand{\mathvect}[1]{\mathbf{#1}}
+\newcommand{\mathdertree}[1]{\mathscr{#1}}
+\newcommand{\mathprooffig}[1]{\mathfrak{#1}}
+\newcommand{\mathmodel}[1]{\mathcal{#1}}
+\newcommand{\mathprogramsy}[1]{\mathtt{#1}}
+\newcommand{\mathobjsy}[1]{\mathsf{#1}}
+
+\newcommand{\textgtemph}[1]{\textgt{#1}}
+
+\newcommand{\mathnat}{\mathbb{N}}
+
+\newcommand{\Alpha}{\mathrm{A}}
+\newcommand{\Tau}{\mathrm{T}}
+\newcommand{\Zeta}{\mathrm{Z}}
+\newcommand{\mathdash}{\mathchar`-}
+
+%%%%%% bussproofs %%%%%%
+\renewcommand{\fCenter}{\mathrel{\vdash}}
+\newcommand{\rulename}[1]{\textsc{#1}}
+\newcommand{\rulenamelabel}[1]{\RightLabel{(\rulename{#1})}}
