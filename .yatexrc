@@ -1,0 +1,8 @@
+(setq tmp-singlecmd-table '(
+("mathsepstar")
+("mathdash")
+))
+
+(setq tmp-section-table '(
+("mathprls" 2)
+))
