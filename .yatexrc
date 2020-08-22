@@ -1,13 +1,22 @@
 (setq tmp-singlecmd-table '(
+("mathmagicwand")
 ("mathrelbar")
 ("mathsepstar")
 ("mathdash")
 ))
-
 (setq tmp-section-table '(
+("onslide+")
+("mathprtree")
+("onslide")
 ("mathprogramsy")
 ("mathprls" 2)
 ))
+
 (setq tmp-env-table '(
+("ex")
 ("definition")
+))
+
+(setq YaTeX::usepackage-alist-local '(
+("mathdots")
 ))
