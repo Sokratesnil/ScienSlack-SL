@@ -2,7 +2,7 @@
 ("mathsepstar")
 ("mathdash")
 ))
-
 (setq tmp-section-table '(
+("mathprogramsy")
 ("mathprls" 2)
 ))
