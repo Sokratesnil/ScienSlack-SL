@@ -1,8 +1,13 @@
 (setq tmp-singlecmd-table '(
+("mathrelbar")
 ("mathsepstar")
 ("mathdash")
 ))
+
 (setq tmp-section-table '(
 ("mathprogramsy")
 ("mathprls" 2)
+))
+(setq tmp-env-table '(
+("definition")
 ))
