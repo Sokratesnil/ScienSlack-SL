@@ -10,10 +10,10 @@
  
  \begin{frame}<handout:0>{自己紹介}
   \begin{itemize}
-   \item PN : そくらてす
+   \item PN : そくらてす \pause
    \item 普段やっていること : \pause
 	 \begin{itemize}
-	  \item 某大学計算機科学系の学科の博士課程の学生
+	  \item 某大学計算機科学系の学科の博士課程の学生 		\pause
 		\begin{itemize}
 		 \item \alert{計算機科学何もわからん(ノдヽ)} \pause
 		 \item \alert{数学何もわからん(ノдヽ)} \pause
@@ -49,11 +49,17 @@
   \begin{align*}
    &\text{Variables(変数記号)}  &x &\in \mathVar \\
    &\text{Terms(項)}  &t &::= \mathvalnil \mathrelbar x \\
-   &\text{Atomic Formul\ae(原子論理式)}  &\alpha &::= \mathemp \mathrelbar  t = t  \mathrelbar \alert{\mathpointer{t}{1}{t}} \mathrelbar  \alert{\mathpointer{t}{2}{t{,}\ t}} \mathrelbar \\
+   &\text{Atomic Formul\ae(原子論理式)}  &\alpha &::= \alert{\mathemp} \mathrelbar  t = t  \mathrelbar \alert{\mathpointer{t}{1}{t}} \mathrelbar  \alert{\mathpointer{t}{2}{t{,}\ t}} \mathrelbar \\
    & & &\phantom{{}::={}}  \alert{\mathprls{t}{t}} \mathrelbar \alert{\mathprtree{t}}  \\
    &\text{Formul\ae(論理式)}  &\varphi &::= \alpha \mathrelbar \lnot \varphi \mathrelbar \varphi \land \varphi \mathrelbar \exists x.\varphi \mathrelbar \alert{\varphi \mathsepstar \varphi} \mathrelbar \alert{\varphi \mathmagicwand \varphi} \\
   \end{align*}
  \end{definition}
+ \end{frame}
+
+ \begin{frame}{分離論理の意味のイメージ}{$\mathemp$}
+  \begin{center}
+   \vfill \alert{$\mathemp$}
+  \end{center}
  \end{frame}
 
  \begin{frame}{分離論理の意味のイメージ}{$\mapsto$}
@@ -89,7 +95,7 @@
        \end{tikzpicture}
       \end{center}
      \end{minipage} \\
-     $\mathpointer{x}{1}{y}$ & $\mathpointer{x}{2}{y{,}\ z}$
+     \alert{$\mathpointer{x}{1}{y}$} & \alert{$\mathpointer{x}{2}{y{,}\ z}$}
    \end{tabular}
   \end{table} 
  \end{frame}
@@ -108,15 +114,15 @@
        \draw (3.0,-0.5) node{$y$};
       \end{tikzpicture}
      \end{center}     
-    \end{minipage}
-     &\begin{minipage}{0.05\hsize}
+    \end{minipage} 
+     &\onslide+<2->{\begin{minipage}{0.05\hsize}
        \begin{center}
-	\begin{tikzpicture}
-	 \draw (0,0) node{$\mathsepstar$};
-	 \draw (0,-0.5) node{\phantom{$x$}};
-	\end{tikzpicture}
+	\alert{\begin{tikzpicture}
+		\draw (0,0) node{$\mathsepstar$};
+		\draw (0,-0.5) node{\phantom{$x$}};
+	       \end{tikzpicture}}
        \end{center}     
-      \end{minipage}
+      \end{minipage}}
 	 &\begin{minipage}{0.3\hsize}
 	   \begin{center}
 	    \begin{tikzpicture}
@@ -129,11 +135,11 @@
 	    \end{tikzpicture}
 	   \end{center}     
 	  \end{minipage} \\
-     $\mathpointer{x}{1}{y}$ & $\mathsepstar$ & $\mathpointer{y}{1}{z}$
+     $\mathpointer{x}{1}{y}$ & \onslide+<2->{\alert{$\mathsepstar$}} & $\mathpointer{y}{1}{z}$
     \end{tabular}
   \end{table}
- \begin{center}
-  \begin{tikzpicture}
+ \begin{center} 
+\onslide+<3->{\begin{tikzpicture}
    \draw (0,0) rectangle +(1,1);
    \draw (2.5,0) rectangle +(1,1);
    \draw (5.0,0) rectangle +(1,1);
@@ -143,11 +149,11 @@
    \draw (5.5,-0.5) node{$z$};
    
    \draw (0.5,0.5) node{$\bullet$};
-   \draw[-latex,thick] (0.5,0.5) -- (2.9,0.5);
-   \draw (3.0,0.5) node{$\bullet$};
+   \draw[-latex,thick] (0.5,0.5) -- (3.0,0.5);
+   \draw (3.0,0.5) node{$\circ$};
    \draw[-latex,thick] (3.0,0.5) -- (5.5,0.5);
   \end{tikzpicture} \\
-  $\mathpointer{x}{1}{y}\mathsepstar \mathpointer{y}{1}{z}$
+  \alert{$\mathpointer{x}{1}{y}\mathsepstar \mathpointer{y}{1}{z}$}}
  \end{center}
 \end{frame}
 
@@ -159,19 +165,18 @@
    \draw (0.5,0.5) node{$\bullet$};
 
    \draw (2.5,0) rectangle +(1,1);
-   \draw (3.0,-0.5) node{-};
-   \draw (3.0,0.5) node{$\bullet$};
+   \draw (3.0,0.5) node{$\circ$};
 
    \draw (5.5,0.5) node{$\cdots\cdots$};
 
    \draw (7.5,0) rectangle +(1,1);
    \draw (8.0,-0.5) node{$y$};
    
-   \draw[-latex,thick] (0.5,0.5) -- (2.9,0.5);
+   \draw[-latex,thick] (0.5,0.5) -- (3.0,0.5);
    \draw[-latex,thick] (3.0,0.5) -- (4.5,0.5);
    \draw[-latex,thick] (6.5,0.5) -- (8.0,0.5);
   \end{tikzpicture} \\
-  $\mathprls{x}{y}$
+  \alert{$\mathprls{x}{y}$}
  \end{center}
 \end{frame}
 
@@ -221,7 +226,7 @@
   \draw[-latex,thick] (-1.5,-3.0) -- (-2.5,-4.5);
   \draw[-latex,thick] (-1.5,-3.0) -- (-0.5,-4.5);
  \end{tikzpicture} \\
- $\mathprtree{x}$
+\alert{$\mathprtree{x}$}
 \end{center}
 \end{frame}
 
@@ -308,7 +313,7 @@
   \bibitem{Brotherston2015} James Brotherston, 
 	  `` An introduction to separation logic '', 
 	  Logic Summer School, ANU, 7 December 2015.
-\bibitem{Sokratesnil2020} Sokratesnil，『分離論理入門のようなもの』，\url{}
+\bibitem{Sokratesnil2020} Sokratesnil，『分離論理入門のようなもの』，\url{https://sokratesnil.github.io/pdfs/SL.pdf}
  \end{thebibliography} 
 \end{frame}
 
@@ -334,7 +339,7 @@
    \end{prooftree}
   \end{definition}
   \begin{rem}
-   一般に次は成立しない。
+   一般に次は成立しない．
    \begin{prooftree}
     \AxiomC{$\left\{P\right\} C \left\{Q\right\}$}
     \UnaryInfC{$\left\{P \land R\right\} C \left\{Q \land R\right\}$}
