@@ -1,5 +1,6 @@
 \documentclass[notheorems, aspectratio=169, 12pt, unicode]{beamer}
 \usepackage{mysettings}
+\input{title}
 \begin{document}
 
 \begin{frame}
@@ -10,10 +11,10 @@
  
  \begin{frame}<handout:0>{自己紹介}
   \begin{itemize}
-   \item PN : そくらてす \pause
-   \item 普段やっていること : \pause
+   \item PN : そくらてす
+   \item 普段やっていること :
 	 \begin{itemize}
-	  \item 某大学計算機科学系の学科の博士課程の学生 		\pause
+	  \item 某大学計算機科学系の学科の博士課程の学生 \pause
 		\begin{itemize}
 		 \item \alert{計算機科学何もわからん(ノдヽ)} \pause
 		 \item \alert{数学何もわからん(ノдヽ)} \pause
@@ -22,25 +23,32 @@
 		\end{itemize}
 	  \item \structure{Twitter} でくだを巻く \pause 
 	 \end{itemize}
+   \item つまるところただの人間のくず \pause
    \item 間違ったこと言ったら教えてね
-  \end{itemize} 
+  \end{itemize}
  \end{frame}
  
  \section{Separation Logic}
 
- \begin{frame}{分離論理とは？}
+ \begin{frame}{SLとは？}
   \begin{itemize}
-   \item \alert{分離論理}とは？ \pause
+   \item SL とは？ \pause
+	 \begin{itemize}
+	  \item Separation Logic （分離論理）の略 \pause
+	 \end{itemize}
+   \item \alert{分離論理}とは？\pause
 	 \begin{itemize}
 	  \item \alert{ヒープ領域}に言及できる論理体系
-	  \item \alert{ヒープ領域}の状態を表す記法 \pause
+		\begin{itemize}
+		 \item （ヒープ領域の）分離（を意味する論理記号の入った）論理
+		 \item \alert{ヒープ領域}の状態を表す記法
+		\end{itemize}
 	 \end{itemize}
-   \item \alert{ヒープ領域}とは？ \pause
+   \item \alert{ヒープ領域}とは？
 	 \begin{itemize}
-	  \item C言語などの\alert{ポインタ}で触ることのできるメモリの領域 \pause
-		(と思っといてくれ) 
+	  \item C言語などの\alert{ポインタ}で触ることのできるメモリの領域（と思っといてくれ）
 	 \end{itemize}
-  \end{itemize} 
+  \end{itemize}
  \end{frame}
 
  \begin{frame}{分離論理の論理式}

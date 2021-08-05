@@ -1,7 +1,7 @@
 #LaTeX用MakeFile
 MAINNAME = SL
 MAINFILE = $(MAINNAME).tex
-SLIDE = $(MAINNAME)_slide.pdf
+SLIDE = $(MAINNAME).pdf
 HANDOUT = $(MAINNAME)_handout.pdf
 LATEX = latexmk -c -gg -lualatex
 SETTINGS = mysettings.sty
@@ -13,11 +13,11 @@ all: $(SLIDE) $(HANDOUT)
 slide: $(SLIDE)
 handout: $(HANDOUT)
 
-$(SLIDE): $(MAINNAME)_slide.ltx $(MAINFILE) $(SETTINGS)
+$(SLIDE): $(MAINFILE) $(SETTINGS) title.tex
 	$(LATEX) $<
 	make clean
 
-$(HANDOUT): $(MAINNAME)_handout.ltx $(MAINFILE) $(SETTINGS)
+$(HANDOUT): $(MAINNAME)_handout.ltx $(MAINFILE) $(SETTINGS) title.tex
 	$(LATEX) $<
 	make clean
 
